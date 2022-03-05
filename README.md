@@ -7,6 +7,6 @@ The rest of the CSS properties was created by me.
 
 In the HTML file there are only a #root div element, and the borrowed flame and snow elements. 
 
-Page's URL: https://kacagohollo.github.io/character-form/
+URL: https://kacagohollo.github.io/character-form/
 
 ![image](https://user-images.githubusercontent.com/64640272/156787801-1b637a4b-6098-4728-b404-2e07ba2399d5.png)
