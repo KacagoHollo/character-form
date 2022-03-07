@@ -370,6 +370,43 @@ p {
   }
 }
 
+div#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  background: rgb(23, 128, 161);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(23, 128, 161, 1) 4%,
+    rgba(46, 111, 149, 1) 25%,
+    rgba(92, 77, 125, 1) 80%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(23, 128, 161, 1) 4%,
+    rgba(46, 111, 149, 1) 25%,
+    rgba(92, 77, 125, 1) 80%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(23, 128, 161, 1) 4%,
+    rgba(46, 111, 149, 1) 25%,
+    rgba(92, 77, 125, 1) 80%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1780a1",endColorstr="#5c4d7d",GradientType=1);
+  z-index: 100;
+
+  color: #efefd0;
+  text-shadow: 2px 1px #240046;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Start of fire animation */
 
 .fire {

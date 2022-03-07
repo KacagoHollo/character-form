@@ -1,17 +1,17 @@
+const formTitle = (title) => {
+    return `
+        <h2>
+            ${title}
+        </h2>
+    `;
+}
+
 const inputCharacteristic = (type, id, label) => {
     return `
         <div>
             <label for="${id}">${label}</label>
             <input type="${type}" id="${id}">
         </div>
-    `;
-}
-
-const formTitle = (title) => {
-    return `
-        <h2>
-            ${title}
-        </h2>
     `;
 }
 
@@ -48,7 +48,6 @@ const genderCH = (event) => {
 }
 
 const genderImg = (event) => {
-    // let genderChoose = document.getElementById("gender").value;
     let genderChoose = event.target.value;
     let divGen = document.querySelector("#divGen");
 
@@ -150,11 +149,19 @@ const classImg = (event) => {
 }
 
 const classCh = (event) => {
-    document.querySelector("#inputContentC").innerHTML = event.target.value
+    document.querySelector("#inputContentC").innerHTML = event.target.value;
 }
 
 const nameCh = (event) => {
     document.querySelector("#inputContentN").innerHTML = event.target.value;
+}
+
+const submitForm = () => {
+
+            document.querySelector("body").insertAdjacentHTML("beforebegin", `<div id="loading"><h1>Loading...</h1>
+            </div>
+           
+            `);
 }
 
 function loadEvent() {
@@ -171,30 +178,28 @@ function loadEvent() {
     <div id="inputContentC"></div>
     <div id="divClass"></div>
     <div id="inputContentN"></div>
-
+   
     `);
 
-    // const form = document.querySelector("#form");
-    // form.addEventListener("submit", formSubmit);
 
-    // !!!!!
     const nameSelect = document.getElementById("name");
     nameSelect.addEventListener("input", nameCh);
 
     const genderSelect = document.getElementById("gender");
     genderSelect.addEventListener("input", genderCH);
     genderSelect.addEventListener("input", genderImg);
-    // select.addEventListener("input", genderImg)
-    // console.log(select);
-    // console.log("-");
-    
+
+
     const raceSelect = document.getElementById("race");
     raceSelect.addEventListener("input", raceCh);
     raceSelect.addEventListener("input", raceImg);
-    
+
     const classSelect = document.getElementById("class");
     classSelect.addEventListener("input", classCh);
     classSelect.addEventListener("input", classImg);
+
+    const saveButton = document.querySelector("button").form;
+    saveButton.addEventListener("submit", () => submitForm());
 }
 
 
